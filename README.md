@@ -4,7 +4,6 @@
 [![Lint](https://github.com/gokern/null/actions/workflows/lint.yml/badge.svg)](https://github.com/gokern/null/actions/workflows/lint.yml)
 [![CodeQL](https://github.com/gokern/null/actions/workflows/codeql.yml/badge.svg)](https://github.com/gokern/null/actions/workflows/codeql.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/gokern/null.svg)](https://pkg.go.dev/github.com/gokern/null)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gokern/null)](https://goreportcard.com/report/github.com/gokern/null)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/gokern/null)](go.mod)
 [![Release](https://img.shields.io/github/v/release/gokern/null?include_prereleases&sort=semver)](https://github.com/gokern/null/releases)
 [![License](https://img.shields.io/github/license/gokern/null)](LICENSE)
