@@ -26,6 +26,7 @@ linters:
   disable:
     - wsl # Deprecated, replaced by wsl_v5.
     - gomodguard # Deprecated, replaced by gomodguard_v2.
+    - exhaustruct # Deprecated, replaced by exhaustruct_v5.
   settings:
     depguard:
       rules:
@@ -50,4 +51,4 @@ linters:
     rules:
       - path: _test\.go
         linters:
-          - exhaustruct
+          - exhaustruct_v5

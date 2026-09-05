@@ -28,7 +28,7 @@ func From[T any](v T) Null[T] {
 // copy of *p.
 func FromPtr[T any](p *T) Null[T] {
 	if p == nil {
-		return Null[T]{} //nolint:exhaustruct // the zero value is null by design
+		return Null[T]{} //nolint:exhaustruct_v5 // the zero value is null by design
 	}
 
 	return From(*p)
