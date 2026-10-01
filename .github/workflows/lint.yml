@@ -31,6 +31,12 @@ jobs:
         uses: jdx/mise-action@v5
         with:
           version: 2026.9.17 # pinned; bump by hand
+        env:
+          # govulncheck 1.8.0 needs go >= 1.26 to build, while this module's
+          # floor is 1.24; setup-go pins GOTOOLCHAIN=local, which would fail
+          # the install. Let the tool BUILD fetch the toolchain it needs; the
+          # tests themselves still run on the floor version.
+          GOTOOLCHAIN: auto
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v9
@@ -57,6 +63,12 @@ jobs:
         uses: jdx/mise-action@v5
         with:
           version: 2026.9.17 # pinned; bump by hand
+        env:
+          # govulncheck 1.8.0 needs go >= 1.26 to build, while this module's
+          # floor is 1.24; setup-go pins GOTOOLCHAIN=local, which would fail
+          # the install. Let the tool BUILD fetch the toolchain it needs; the
+          # tests themselves still run on the floor version.
+          GOTOOLCHAIN: auto
 
       - name: Check go.mod is tidy
         run: mise run tidy
