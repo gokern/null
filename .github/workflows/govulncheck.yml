@@ -22,15 +22,15 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v7
         with:
-          go-version-file: go.mod
+          go-version: '1.27.3'
           check-latest: true
 
       - name: Set up mise
-        uses: jdx/mise-action@v5
+        uses: jdx/mise-action@v5.2.2
         with:
-          version: 2026.9.17 # pinned; bump by hand
+          version: 2026.10.17 # pinned; bump by hand
         env:
-          # govulncheck 1.8.0 needs go >= 1.26 to build, while this module's
+          # govulncheck needs a modern Go compiler to build, while this module's
           # floor is 1.24; setup-go pins GOTOOLCHAIN=local, which would fail
           # the install. Let the tool BUILD fetch the toolchain it needs; the
           # tests themselves still run on the floor version.
